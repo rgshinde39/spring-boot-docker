@@ -4,11 +4,11 @@ FROM eclipse-temurin:17-jdk-jammy
 
 WORKDIR /app
 
+CMD ["chmod", "+x", "mvnw"]
 COPY .mvn/ .mvn
 COPY mvnw pom.xml ./
 RUN ./mvnw dependency:resolve
 
 COPY src ./src
 
-CMD ["chmod", "+x", "mvnw"]
 CMD ["./mvnw", "spring-boot:run"]
