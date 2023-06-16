@@ -34,7 +34,7 @@ jobs:
       with:
         image: rgshinde39/spring-boot-docker
         tags: latest
-        registry: docker.io
+        registry: https://hub.docker.com/
         dockerfile: Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_TOKEN }}
